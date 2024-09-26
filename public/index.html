@@ -2,6 +2,8 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<meta charset="UTF-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Babacar Dia portfolio</title>
 		<link rel="stylesheet" href="index.css">
 		<meta charset="utf-8">
@@ -21,6 +23,22 @@
 				<h2> Hi I am Babacar Dia </h2>
 			</header>
 
+			<div id="navbar"></div>
+
+			<script>
+
+				function classNames(...classes) {
+				return classes.filter(Boolean).join(' ');
+				}
+
+				const element = document.getElementById('navbar');
+   				const isActive = true;
+    			const hasError = false;
+
+				// Use the classNames function to apply dynamic classes
+				element.className = classNames('base-class', isActive && 'active-class', hasError && 'error-class');
+
+			</script>
 			
 		</main>
 		
