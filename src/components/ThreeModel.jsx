@@ -33,7 +33,7 @@ const ThreeModel = () => {
         controls.dampingFactor = 0.25;  // Adjust damping factor
         controls.screenSpacePanning = false;  // Prevent pan in screen spaces
         controls.minDistance = 5;  // Set minimum zoom distance
-        controls.maxDistance = 30;  // Set maximum zoom distance
+        controls.maxDistance = 40;  // Set maximum zoom distance
         
         
         // Load the Field GLTF model

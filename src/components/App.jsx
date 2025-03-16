@@ -1,17 +1,18 @@
 
 import React from "react";
-import {HashRouter as Router, Routes, Route} from 'react-router-dom';
+import {Routes, Route} from 'react-router-dom';
 import Home from '../Pages/home';
 import MoreInfo from '../Pages/moreInfo';
+import Idk from '../Pages/idk';
 function App() {
   return (
     
-    <Router>
+    
       <Routes>
-      <Route path="/home" element={<Home/>}/>
-      <Route path="/moreInfo" element={<MoreInfo/>}></Route>
+      <Route path="/" element={<Home />}/>
+      <Route path="/moreInfo" element={<MoreInfo />}></Route>
       </Routes>
-    </Router>
+   
   
   )
 }
