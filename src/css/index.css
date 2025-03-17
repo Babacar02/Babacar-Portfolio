@@ -1,93 +1,13 @@
-
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
-
-canvas{ 
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
-main{
-  position: absolute;
-}
-/* nav bar styling **/ 
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{
+padding:0;
+margin:0;
+box-sizing:border-box;
 }
 
 body {
   font-family: Arial, sans-serif;
-  margin-top: 50px; /* Adjust to match navbar height */
+  margin:0;
+  background-color: black;
 }
 
 /* NAVBAR STYLING */
@@ -111,7 +31,6 @@ body {
   justify-content: left;
   border-bottom: 5px solid whitesmoke;
   width:100%;
-  padding:20px;
   height: 150px;
   align-items: center;
   text-align: center;
@@ -170,24 +89,37 @@ body {
   text-align: center;
    margin:0;
   }
-  /* #8f8380
-  472d0b */
-.moreInfo-nav-container{
+
+
+  /*more info page stlye**/
+
+section{
+  background-color: black;
+  width: 100%;
+  height: 100%;
+}
+
+.top-nav-container{
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: black;
+  height: 88px;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Ensures spacing between elements */
-  z-index: 100;
-  padding: 15px 5%; /* Reduce padding for small screens */
+  justify-content: space-between;
+  background-color: black;
   backdrop-filter: blur(10px);
-  border-bottom: 2px solid black;
-  flex-wrap: wrap; /* Allows wrapping on smaller screens */
-  min-width: 360px;
+  z-index: 1000;
+  padding-left: 2%;
+  padding-right: 2%;
+}
 
+.nav-elements{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
 }
 
 .name{
@@ -204,13 +136,20 @@ body {
   transform: scale(1,1);
 }
 
+.moreInfo-nav-links{
+  display: flex;
+  gap:20px
+}
+
+
 .moreInfo-nav-links a{
   font-size: 18px;
   color: white;
   font-weight: 500;
-  margin: 0 20px;
+  transition: 0.3s ease;
+  text-decoration: none;
   border-bottom: 3px solid transparent;
-  transition: 0.3 ease;
+
 }
 
 .name span{
@@ -224,41 +163,105 @@ body {
 }
 
 .home-link{
-  padding: 10px 28px;
-  background-color: white;
   color: black;
-  border: 2px solid transparent;
   border-radius: 8px;
   font-size: 16px;
-  letter-spacing: 1px;
   font-weight: 600;
-  transition: 0.3 ease;
+  transition: 0.3s ease;
+  text-decoration: none;
 }
+
+.home-link a{
+  color: black;
+}
+
+
+.top-hamburger {
+  display: none; 
+  font-size: 28px;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top:20px;
+  color:blue;
+  background-color: blue;
+}
+
+@media screen and (max-width: 600px) {
+  /* Hide Nav Links on Small Screens */
+  .moreInfo-nav-links{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    z-index: 100;
+  }
+
+  /* Show Nav when Menu is Open */
+  .moreInfo-nav-links.open{
+    display: flex;
+    background-color: black;
+  }
+
+  .moreInfo-nav-links a{
+    border-bottom: 2px solid white;
+    width: 100%;
+    color:white;
+  }
+
+  /* Hamburger Button */
+  .top-hamburger {
+    display: block;
+    font-size: 28px;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  .top-hamburger:hover{
+    color: #233266;
+  }
+
+ .nav-elements{
+  padding-right: 20%;
+ }
+
+
+}
+
 
 .About{
   width: 100vw; /* Full width of the viewport */
-  min-height: 100vh; /* At least the full height of the viewport */
   display: flex;
   justify-content: center; /* Centers content horizontally */
   align-items: center; /* Centers content vertically */
   background-color: black;
-  padding: 100px 0 40px; /* Adds space at the top and bottom */
-}
-
-.about-seciton{
-  max-width: 1200px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px; /* Space between text and image */
-  flex-wrap: wrap; /* Allows wrapping for small screens */
+  height: 50vh;
 }
 
 .about-text{
-  flex: 1; /* Allow it to take available space */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
   color: white;
   padding-right: 30px;
   min-width: 300px; /* Prevent it from shrinking too much */
+  text-align: left;
+}
+
+.about-text h1{
+  font-size: 36px;
+  color: white;
+  line-height: 1.2;
 }
 
 .about-text h2{
@@ -271,14 +274,7 @@ body {
   font-size:62px;
   line-height: 1.2;
 }
-
-.about-section h1{
-  font-size: 36px;
-  color: white;
-  line-height: 1.2;
-}
-
-.about-seciton p{
+.about-text p{
   font-size: 18px;
   margin: 25px 0 30px;
   color: white;
@@ -296,7 +292,7 @@ body {
   flex: 1; /* Allow it to take available space */
   max-width: 400px; /* Prevent it from being too large */
   display: flex;
-  justify-content: flex-end; /* Push it to the right */
+  float: right;
 }
 
 .btn-box{
@@ -343,24 +339,7 @@ body {
   }
 }
 
-@media (max-width: 768px) {
-  .moreInfo-nav-container {
-    flex-direction: column; /* Stack logo and links */
-    align-items: center;
-    padding: 10px 5%;
-    min-width: 360px;
-  }
 
-  .moreInfo-nav-links {
-    flex-direction: column; /* Stack links vertically */
-    align-items: center;
-    text-align: center;
-  }
-
-  .home-link {
-    margin-top: 10px; /* Space out Home button */
-  }
-}
 
 /* Scrollbar **/
 ::-webkit-scrollbar{
@@ -369,7 +348,7 @@ body {
 ::-webkit-scrollbar-thumb{
   background-color: #0A2342;
 }
-::webkit-scrollbar-track{
+::-webkit-scrollbar-track{
   background-color: white;
   width: 50px;
 }
