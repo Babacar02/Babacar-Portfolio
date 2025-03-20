@@ -11,8 +11,8 @@ export default function NavBar(){
           <h1>Babacar</h1>
       </div>
         <div className='nav-links'>
-        <a href="/moreInfo"><CgProfile size="30" color="white"/>About Me</a>
-        <a href="/moreInfo"><FaFolderOpen size="30" color="white" />Projects</a>
+        <a href="/moreInfo#about"><CgProfile size="30" color="white"/>About Me</a>
+        <a href="/moreInfo#experience"><FaFolderOpen size="30" color="white" />Experience</a>
         <a href="/moreInfo"><BiSolidContact size="30" color="white" />Contact</a>
        
       </div>

@@ -2,13 +2,13 @@ import React from "react";
 import { useState } from "react";
 import '../css/index.css';
 import Hamburger from "hamburger-react";
+import ContactForm from "../components/ContactForm";
 
 const MoreInfo = () => {
   const [isOpen,setOpen] = useState(false);
   return (
     <>
 
-<section >
 
 <div className="top-nav-container">
 <a href="#" className="name"><span>Baba</span>car</a>
@@ -24,24 +24,23 @@ const MoreInfo = () => {
       </nav>
         </div>
     </div>
-</section>
+
 
 <section id="about" className="About">
         <div className="about-text"> 
           <h1>It's</h1>
           <h2>Babacar</h2>
           <h3>a ITI & CS Major</h3>
-          <p>Current student studying Information Technology with
-          a minor in Computer Science.<br></br>Im interested in web development, cloud computing and learning more about
-          <br></br>security frameworks.
-          </p>
+          <p>Current student studying Information Technology with a minor in Computer Science. 
+          Im interested in web development, cloud computing and learning more aboutsecurity frameworks.</p>
+          
           <div className="btn-box">
             <a href= "https://www.linkedin.com/in/b-dia/" target="_blank" className="btn-1">Linkedln</a>
           </div>
         </div>
         
         <div className="img-container">
-            <img src="/img/headshot photo.png" width="350" height="400" alt="image of me"></img>          
+            <img src="/img/headshot photo.png" width="350" height="280" alt="image of me"></img>          
         </div>
     </section>
 
@@ -64,23 +63,28 @@ const MoreInfo = () => {
 
             <div className="club-header">
               <h1> Front-End Developer, UMN Social Coding Club, Minneapolis, MN </h1>
-              <h2>Jan 2023-Present</h2>
+              <h2>Jan 2023 - Present</h2>
             </div>
+            <div className="club-list"> 
               <ul>
                 <li>Front-end developer for Gopher X Metro, integrating Google API to optimize a transit web  
                 application with improved route efficiency.</li>
                 <li>Developed a search feature, enhancing user experience with React components, Node.js, and TypeScript.</li>
                 <li>Collaborated in an agile team, refining front-end components and optimizing back-end performance.</li>
               </ul>
-          
-
           </div>
-
-
+          </div>
       </div>
-
-
     </section>
+
+  <section className="contact">
+
+    <div className="contact-content">
+      <ContactForm/>
+    </div>
+   
+  </section>
+ 
    
 
 
