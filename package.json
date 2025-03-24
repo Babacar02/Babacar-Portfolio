@@ -17,7 +17,6 @@
     "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^2.2.0",
     "@rollup/rollup-darwin-arm64": "^4.36.0",
-    "@tailwindcss/oxide-darwin-arm64": "^0.0.0-insiders.b009afa",
     "@tailwindcss/vite": "^4.0.13",
     "emailjs": "^4.0.3",
     "emailjs-com": "^3.2.0",
