@@ -87,7 +87,7 @@ const ThreeModel = () => {
         });
         
         //change landscape image 
-        const background_img = new THREE.TextureLoader().load('/img/Soccer_clouds.jpg');
+        const background_img = new THREE.TextureLoader().load("/img/Soccer_clouds.jpg");
         scene.background = background_img; 
         
         // Start the animation loop
