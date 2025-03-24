@@ -39,7 +39,7 @@ const ThreeModel = () => {
         // Load the Field GLTF model
         const loader = new GLTFLoader();
         let fieldModel;
-        loader.load('public/mini_soccer_field/scene.gltf',
+        loader.load('public/mini_field/scene.gltf',
             function (gltf) {
                 fieldModel = gltf.scene;
                 scene.add(fieldModel);
