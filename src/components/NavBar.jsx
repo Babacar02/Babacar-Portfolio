@@ -14,7 +14,7 @@ export default function NavBar() {
     <FaArrowCircleRight className="sidebar-arrow" onClick={() => sidebarSetClose(!sidebarIsClose)}></FaArrowCircleRight>
   
       <div className="profile-container" >
-        <img src="img\headshot photo.png" className="profile-image"></img>
+        <img src="public/img/headshot_photo.png" className="profile-image"></img>
         <h1 style={{ display: sidebarIsClose ? "none" : "block" }}>Babacar</h1>
       </div>
       <div className='nav-links'>

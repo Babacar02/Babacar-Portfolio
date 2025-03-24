@@ -39,7 +39,7 @@ const ThreeModel = () => {
         // Load the Field GLTF model
         const loader = new GLTFLoader();
         let fieldModel;
-        loader.load('/mini_field/scene.gltf',
+        loader.load('public/mini_soccer_field/scene.gltf',
             function (gltf) {
                 fieldModel = gltf.scene;
                 scene.add(fieldModel);
@@ -55,7 +55,7 @@ const ThreeModel = () => {
 
         //loading soccer ball
         let ballModel;
-        loader.load('./soccer_ball/scene.gltf',
+        loader.load('public/soccer_ball/scene.gltf',
             function (gltf) {
                 ballModel = gltf.scene;
                 console.log("ball " , ballModel.position);
@@ -88,7 +88,7 @@ const ThreeModel = () => {
         });
         
         //change landscape image 
-        const background_img = new THREE.TextureLoader().load('/img/soccer_clouds.jpg');
+        const background_img = new THREE.TextureLoader().load('public/img/Soccer_clouds.jpg');
         scene.background = background_img; 
         
         // Start the animation loop

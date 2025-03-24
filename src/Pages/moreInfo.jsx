@@ -43,7 +43,7 @@ const MoreInfo = () => {
         </div>
 
         <div className="img-container">
-          <img src="/img/headshot photo.png" width="350" height="280" alt="image of me"></img>
+          <img src="public/img/headshot_photo.png" width="350" height="280" alt="image of me"></img>
         </div>
       </section>
 
