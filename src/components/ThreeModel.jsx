@@ -35,7 +35,6 @@ const ThreeModel = () => {
         controls.minDistance = 5;  // Set minimum zoom distance
         controls.maxDistance = 40;  // Set maximum zoom distance
         
-        
         // Load the Field GLTF model
         const loader = new GLTFLoader();
         let fieldModel;
