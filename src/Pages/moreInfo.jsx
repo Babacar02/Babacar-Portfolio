@@ -5,6 +5,7 @@ import Hamburger from "hamburger-react";
 import ContactForm from '../components/ContactForm';
 import SkillGrid from "../components/SkillGrid";
 import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa"
 
 const MoreInfo = () => {
   const [isOpen, setOpen] = useState(false);
@@ -38,7 +39,7 @@ const MoreInfo = () => {
             Im interested in web development, cloud computing and learning more aboutsecurity frameworks.</p>
 
           <div className="btn-box">
-            <a href="https://www.linkedin.com/in/b-dia/" target="_blank" className="btn-1">Linkedln</a>
+            <a href="https://www.linkedin.com/in/b-dia/" target="_blank" className="btn-1"><FaLinkedin size="50"/></a>
           </div>
         </div>
 
@@ -83,7 +84,6 @@ const MoreInfo = () => {
       <section id="skills" className="skills">
         <div className="skill-header">
           <a href="https://github.com/Babacar02" target="_blank" >Skills <FaGithub></FaGithub> </a>
-        
         </div>
        
          <SkillGrid/>

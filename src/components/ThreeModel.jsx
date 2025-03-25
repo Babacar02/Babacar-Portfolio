@@ -11,7 +11,7 @@ const ThreeModel = () => {
         
         // Set up a camera
         const camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.1, 1000);
-        camera.position.set(1,12,25); //starting position(x,y,z)
+        camera.position.set(1,15,30); //starting position(x,y,z)
 
             // Set up a renderer
         const renderer = new THREE.WebGLRenderer({ canvas: document.querySelector('#soccer') });
