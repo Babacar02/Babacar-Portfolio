@@ -36,7 +36,7 @@ const MoreInfo = () => {
           <h2>Babacar</h2>
           <h3>a ITI & CS Major</h3>
           <p>Current student studying Information Technology with a minor in Computer Science.
-            Im interested in web development, cloud computing and learning more aboutsecurity frameworks.</p>
+            Im interested in web development, cloud computing and learning more about security frameworks.</p>
 
           <div className="btn-box">
             <a href="https://www.linkedin.com/in/b-dia/" target="_blank" className="btn-1"><FaLinkedin size="50"/></a>
