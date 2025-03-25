@@ -1,29 +1,25 @@
-import { BiSolidContact } from "react-icons/bi";
-import { FaFolderOpen } from "react-icons/fa";
-import { CgProfile } from "react-icons/cg";
-import { FaArrowCircleRight } from "react-icons/fa";
-import {useState} from 'react';
+import { useState } from "react";
+import '../css/index.css';
+import Hamburger from "hamburger-react";
 
 export default function NavBar() {
-  const [sidebarIsClose, sidebarSetClose] = useState(false);
+  const [isOpen, setOpen] = useState(false);
 
   return (
-  
     
-    <div className={`sidebar ${sidebarIsClose ? "close" : "default"}`} >
-    <FaArrowCircleRight className="sidebar-arrow" onClick={() => sidebarSetClose(!sidebarIsClose)}></FaArrowCircleRight>
-  
+    <div className="sidebar" >
+        <div className="home-hamburger">
+          <Hamburger toggled={isOpen} toggle={setOpen}
+        /></div>
       <div className="profile-container" >
         <img src="/img/headshot_photo.png" className="profile-image"></img>
-        <h1 style={{ display: sidebarIsClose ? "none" : "block" }}>Babacar</h1>
+        <h1 className="active">Babacar</h1>
       </div>
-      <div className='nav-links'>
-        <a href="/moreInfo#about"><CgProfile size="30" color="white" /> <span style={{ display: sidebarIsClose ? "none" : "inline" }}> About Me</span></a>
-        <a href="/moreInfo#experience"><FaFolderOpen size="30" color="white" />            <span style={{ display: sidebarIsClose ? "none" : "inline" }}> Experience</span></a>
-        <a href="/moreInfo#contact"><BiSolidContact size="30" color="white" /><span style={{ display: sidebarIsClose ? "none" : "inline" }}> Contact</span>
-          </a>
-
-      </div>
+      <nav className={`nav-links ${isOpen ? "open" : ""}`}>
+        <a href="/moreInfo">Portfolio</a>
+        <a>Linkedln</a>
+        <a>Github</a>
+      </nav>
       </div>
  
   );
