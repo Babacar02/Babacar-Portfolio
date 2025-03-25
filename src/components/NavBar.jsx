@@ -17,8 +17,8 @@ export default function NavBar() {
       </div>
       <nav className={`nav-links ${isOpen ? "open" : ""}`}>
         <a href="/moreInfo">Portfolio</a>
-        <a>Linkedln</a>
-        <a>Github</a>
+        <a href="https://www.linkedin.com/in/b-dia" target="_blank">Linkedln</a>
+        <a href="https://github.com/Babacar02" target="_blank">Github</a>
       </nav>
       </div>
  

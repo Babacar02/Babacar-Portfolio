@@ -341,26 +341,26 @@ section{
 }
 
 .btn-box{
-  width: 141px;
+  width: 50px;
   display: flex;
-  gap:2em;
   padding-top: 20px;
 }
 
 .btn-1{
-  background-color: black;
+  width: 100%;
   color: white;
   border-radius: 8px;
   font-size: 18px;
   letter-spacing: 1px;
   font-weight:600;
-  transition: 0.3 ease;
   cursor: pointer;
   text-decoration: none;
+  justify-content: center;
 }
 
+
 .btn-1:hover{
-  background-color:#233266;
+  /* background-color:#233266; */
 }
 
 /* Mobile styling**/
