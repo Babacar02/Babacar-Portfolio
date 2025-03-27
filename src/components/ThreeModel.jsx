@@ -26,12 +26,16 @@ const ThreeModel = () => {
         const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
         directionalLight.position.set(1, 1, 1).normalize();
         scene.add(directionalLight);
-        
-        // Initialize OrbitControls
+
+        //controlls interaction of field
         const controls = new OrbitControls(camera, renderer.domElement);
-        controls.enableDamping = true;  // Enable damping (inertia)
-        controls.dampingFactor = 0.25;  // Adjust damping factor
-        controls.screenSpacePanning = false;  // Prevent pan in screen spaces
+        controls.enableDamping = true;  // Smooth rotation
+        controls.dampingFactor = 0.25;
+        controls.enablePan = false;  // Disable panning (right-click dragging)
+        controls.minPolarAngle = Math.PI / 4; 
+        controls.maxPolarAngle = Math.PI / 2; // prevents user from scrolling below field
+        controls.minAzimuthAngle = -Infinity; // Allow full horizontal rotation
+        controls.maxAzimuthAngle = Infinity;
         controls.minDistance = 5;  // Set minimum zoom distance
         controls.maxDistance = 40;  // Set maximum zoom distance
         
