@@ -86,9 +86,10 @@ const ThreeModel = () => {
             renderer.setSize(window.innerWidth, window.innerHeight);
         });
         
-        //change landscape image 
-        const background_img = new THREE.TextureLoader().load("/img/Soccer_clouds.jpg");
-        scene.background = background_img; 
+        //change landscape color 
+        const color = new THREE.Color()
+        color.setStyle("rgb(235,232,219)");
+        scene.background = color;
         
         // Start the animation loop
         animate();
