@@ -11,7 +11,7 @@ const ThreeModel = () => {
         
         // Set up a camera
         const camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.1, 1000);
-        camera.position.set(1,15,30); //starting position(x,y,z)
+        camera.position.set(1,15,36); //starting position(x,y,z)
 
             // Set up a renderer
         const renderer = new THREE.WebGLRenderer({ canvas: document.querySelector('#soccer') });
@@ -20,7 +20,7 @@ const ThreeModel = () => {
         document.body.appendChild( renderer.domElement );
 
         // Add some lighting
-        const ambientLight = new THREE.AmbientLight(0xffffff);
+        const ambientLight = new THREE.AmbientLight(0xffffff, 5);
         scene.add(ambientLight);
         
         const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
@@ -37,7 +37,7 @@ const ThreeModel = () => {
         controls.minAzimuthAngle = -Infinity; // Allow full horizontal rotation
         controls.maxAzimuthAngle = Infinity;
         controls.minDistance = 5;  // Set minimum zoom distance
-        controls.maxDistance = 40;  // Set maximum zoom distance
+        controls.maxDistance = 45;  // Set maximum zoom distance
         
         // Load the Field GLTF model
         const loader = new GLTFLoader();
@@ -92,7 +92,7 @@ const ThreeModel = () => {
         
         //change landscape color 
         const color = new THREE.Color()
-        color.setStyle("rgb(235,232,219)");
+        color.setStyle("rgb(0,0,0)");
         scene.background = color;
         
         // Start the animation loop
