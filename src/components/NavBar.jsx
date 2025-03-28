@@ -8,13 +8,13 @@ export default function NavBar() {
   return (
     
     <div className="sidebar" >
-        <div className="home-hamburger">
-          <Hamburger toggled={isOpen} toggle={setOpen}
-        /></div>
       <div className="profile-container" >
         <img src="/img/headshot_photo.png" className="profile-image"></img>
         <h1 className="active">Babacar</h1>
       </div>
+      <div className="home-hamburger">
+          <Hamburger toggled={isOpen} toggle={setOpen}
+        /></div>
       <nav className={`nav-links ${isOpen ? "open" : ""}`}>
         <a href="/moreInfo">Portfolio</a>
         <a href="https://www.linkedin.com/in/b-dia" target="_blank">Linkedln</a>

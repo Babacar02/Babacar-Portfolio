@@ -50,6 +50,11 @@ html, body {
   color: white;
 }
 
+.profile-container h1:hover{
+  color:#0A97B0;
+  cursor: pointer;
+}
+
 .nav-links {
   display: flex;
   gap:20px;
@@ -97,6 +102,11 @@ html, body {
     border-radius: 25px;
   }
 
+  .profile-container{
+    display: flex;
+    position: fixed;
+  }
+
   .nav-links a{
     width: 100%;
     color:black;
@@ -108,7 +118,8 @@ html, body {
 
   /* Hamburger Button */
   .home-hamburger {
-    display: block;
+    display: flex;
+    padding-left: 90%;
     font-size: 28px;
     background: none;
     color: white;
@@ -117,12 +128,9 @@ html, body {
   }
 
   .home-hamburger:hover{
-    color: #233266;
+    color: #0A97B0;
   }
 }
-
-
-
 
 /*more info page stlye**/
 section{
@@ -163,9 +171,9 @@ section{
 }
 
 .name:hover{
-  color:#233266;
-  text-shadow: 0 0 25px #233266,
-  0 0 50px #233266;
+  color:#0A97B0;
+  text-shadow: 0 0 25px #0A97B0,
+  0 0 50px #0A97B0;
   transform: scale(1,1);
 }
 
@@ -261,7 +269,7 @@ section{
   }
 
   .top-hamburger:hover{
-    color: #233266;
+    color: #0A97B0;
   }
 
  .nav-elements{
@@ -276,8 +284,7 @@ section{
   justify-content: center;
   max-width: 1000px;
   width: 100%;
-  margin: auto;
-  padding-bottom:50px;
+  margin: 40px auto auto;
   box-sizing: border-box;
 
   box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.8), 
@@ -420,9 +427,8 @@ section{
   justify-content: center;
   width: 100%;
   max-width: 1000px; 
-  margin: auto;
+  margin: 40px auto auto;
   box-sizing: border-box;
-  margin-top:40px;
 }
 
 .experience-content {
