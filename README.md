@@ -4,12 +4,7 @@ Welcome to my Personal Portfolio – a website React-powered, to showcase my exp
 
 Live Site: https://babacar-portfolio.vercel.app/
 
-GitHub: Babacar02/Babacar-Portfolio</br><br>
-
-
-
-
-
+GitHub: Babacar02/Babacar-Portfolio
 
 # 🔍 Overview
 This portfolio was firstly created to explore what three.js had to offer and now it's a way to showcase what I enjoy working on
